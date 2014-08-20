@@ -1,0 +1,37 @@
+.ui-widget-overlay {
+   background: #666;
+   opacity: .30;
+   filter: Alpha(Opacity=30);
+   position:fixed;
+}
+
+.ui-dialog { 
+	z-index: 1000;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-dialog-titlebar {
+	background: linear-gradient(to top, #ccc 0%,#bbb 20%,#eee 100%);
+	border: 1px solid #AAA;
+}
+
+.answeredButton {
+	background: linear-gradient(to top, #9fd 0%,#7db 20%,#afd 100%);
+	background-color:#afc;
+	text-shadow: none;
+}
+
+span.VQControls {
+	font-size: 150%;
+}
+
+span#onoff {
+	font-weight: bold;
+}
+
+span#playpauseword{
+	font-weight: bold;
+}

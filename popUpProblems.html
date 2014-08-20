@@ -1,0 +1,37 @@
+<!-- 
+	Video-Embedded Problems Controller! 
+	Copy-and-paste all of this into a Raw HTML element under your video.
+	The table below tells us what time (in seconds) each problem will pop up.
+	Problems are called by name - make sure the name matches exactly and there are no duplicates.
+	Note that every row but the last one needs a comma.
+-->
+
+<script>
+var popUpProblemTimer = 
+[
+	{time: 4, title: "What Game?"},
+	{time: 8.5, title: "What Happened?"},
+	{time: 12, title: "What Was That?"},
+	{time: 16, title: "Collision"}
+];
+</script>
+
+
+<!-- 
+	Make sure that the script and link tags below are included. 
+	You will not need to change these. 
+-->
+<script src="/static/popUpProblems.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/popUpProblems.css" />
+
+
+<h4>Video Question Controls</h4>
+
+<!-- 
+	These are the control buttons for the video problems.
+	You can change the text in these, but don't change the tags at all. 
+-->
+<button id="popUpPlayPause" aria-label="Start"><span id="playpauseicon" class="VQControls">&#8227;</span> <span id="playpauseword">Play</span></button>
+<button id="popUpReset" aria-label="Answer Video Problems From Beginning"><span class="VQControls">&#8617;</span> Restart</button>
+<button id="backOneProblem" aria-label="Go Back One Question"><span class="VQControls">&#8676;</span> Back One</button>
+<button id="problemToggle" aria-label="Toggle Video Problems On/Off"><span id="sunmoon" class="VQControls">&#9788;</span> <span id="onoff">Problems are On</span></button>
