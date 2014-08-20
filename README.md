@@ -9,6 +9,8 @@ If you're an edX student, this script isn't useful for you. It's something that 
 How Do I Implement This?
 --------
 
+You will need: A video already made and embedded in a unit. A set of questions (in the same unit; i.e. the same edX page) that you want to place in your video. Each question should have a unique name.
+
 Upload the .css and .js files to the "Files and Uploads" section of your course. You shouldn't need to touch them afterwards.
 
 Copy the contents of the .html file and paste them into a Raw HTML component. You can delete the Display Name for that element, or you can name it "video problem controls" or something. 
