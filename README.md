@@ -9,7 +9,11 @@ If you're an edX student, this script isn't useful for you. It's something that 
 How Do I Implement This?
 --------
 
-You will need: A video already made and embedded in a unit. A set of questions (in the same unit; i.e. the same edX page) that you want to place in your video. Each question should have a unique name.
+You will need: 
+
+* A video already made and embedded in a unit. 
+* A set of questions (in the same unit; i.e. the same edX page) that you want to place in your video.
+ * Each question should have a unique name.
 
 Upload the .css and .js files to the "Files and Uploads" section of your course. You shouldn't need to touch them afterwards.
 
@@ -54,11 +58,8 @@ Files
 --------
 
 * **popUpProblems.css** provides a few things to help this blend in with edX. Put it in your "Files and Uploads" section.
-
-* **popUpProblems.html** is what you cut-and-paste into a Raw HTML component to make this work. 
-
+* **popUpProblems.html** is what you cut-and-paste into a Raw HTML component to make this work.
 * **popUpProblems.js** does the actual work of moving the problems around and displaying them. Put it in your "Files and Uploads" section.
-
 * **popUpProblems.zip** is fairly unnecessary here on GitHub where you can download the whole thing as a zip file anyway, but 
 
 Dependencies and Fragility
@@ -74,27 +75,21 @@ Status
 To the best of my knowledge, this script works in:
 
 * Chrome on Mac and PC
-
 * Firefox on Mac
-
 * Safari on Mac
-
 * Safari Mobile
 
 This script works with every problem type except for:
 
 * The standard Custom Javascript Display and Input problem that is included in edX. Haven't tested it with other custom JS problems yet.
-
 * The current Peer Assessment / Open Response problems. These are kind of too long to put into the middle of a video anyway, if you ask me.
 
 To Do list
 -----------
 
 * Testing in more browsers
-
 * Work to reduce fragility
-
-* I still have some vague UI concerns, and if you this not working in ways that you would expect, I'd like to hear it.
+* I still have some vague UI concerns, and if you feel this not working in ways that you would expect, I'd like to hear it.
 
 Wish List
 ----------
