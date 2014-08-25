@@ -78,6 +78,7 @@ To the best of my knowledge, this script works in:
 * Firefox on Mac
 * Safari on Mac
 * Safari Mobile
+* IE 10 on Windows 7
 
 This script works with every problem type except for:
 
