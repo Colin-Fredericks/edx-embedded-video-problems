@@ -141,7 +141,7 @@ $(document).ready(function(){
 		});
 		
   		
-		// Let someone turn the pop-up questions on and off.
+		// Play or pause the video
 		$('#popUpPlayPause').on('click tap', function(){
 			if(state.videoPlayer.isPlaying()){
 				state.videoPlayer.pause();
