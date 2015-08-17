@@ -11,11 +11,14 @@ $(document).ready(function(){
 	var skipEmAll;
 	var protectedTime = false;
 	var problemsBeingShown = 0;
-	
+
+
 	// Convert mm:ss format in popUpProblemTimer to seconds.
-	for (var key in popUpProblemTimer) {
-        if (key == 'time') {
-            popUpProblemTimer.time = hmsToTime(popUpProblemTimer.time)
+	for (var i = 0; i < popUpProblemTimer.length; i++){
+    	for (var key in popUpProblemTimer[i]) {
+            if (key == 'time') {
+                popUpProblemTimer[i].time = hmsToTime(popUpProblemTimer[i].time)
+            }
         }
     }
 	
@@ -32,7 +35,7 @@ $(document).ready(function(){
     if (typeof HXpopUpOptions.atPosition === 'undefined') { HXpopUpOptions.atPosition = 'center'; }
     if (typeof HXpopUpOptions.ofTarget === 'undefined') { HXpopUpOptions.ofTarget = window; }
 	
-	
+
 	// Log play/pause events from the player.
 	// Also set the play/pause external control properly.
 	video.on('pause', function () {
