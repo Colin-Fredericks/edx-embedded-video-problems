@@ -6,7 +6,7 @@
 }
 
 .ui-dialog { 
-	z-index: 1000;
+	z-index: 100001 !important;
 }
 
 .no-close .ui-dialog-titlebar-close {

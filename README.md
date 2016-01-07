@@ -59,7 +59,7 @@ Files
 
 * **popUpProblems.css** provides a few things to help this blend in with edX. Put it in your "Files and Uploads" section.
 * **popUpProblems.html** is what you cut-and-paste into a Raw HTML component to make this work.
-* **popUpProblems.js** does the actual work of moving the problems around and displaying them. Put it in your "Files and Uploads" section.
+* **popUpProblems2.js** does the actual work of moving the problems around and displaying them. Put it in your "Files and Uploads" section. If you have the old version without the 2, it's defunct.
 * **popUpProblems.zip** is fairly unnecessary here on GitHub where you can download the whole thing as a zip file anyway, but 
 
 Dependencies and Fragility
