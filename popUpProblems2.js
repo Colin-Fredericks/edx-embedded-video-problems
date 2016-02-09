@@ -236,15 +236,15 @@ $(document).ready(function(){
 	function popUpProblem(title, state){
 		
 		// Find the div for the problem based on its title.
-		var problemDiv = $('h2:contains(' + title + ')').closest('.vert');
+		var problemDiv = $('h3:contains(' + title + ')').closest('.vert');
 
-		var problemID = $('h2:contains(' + title + ')').parent().attr('id');
+		var problemID = $('h3:contains(' + title + ')').parent().attr('id');
 		
 		var nextDiv, tempDiv;
 		var dialogDiv = problemDiv;
 		var includenext = false;
 		
-		// Sometimes we can't find an h2 to latch onto.
+		// Sometimes we can't find an h3 to latch onto.
 		// We put <span style="display:none" class="includer">includenext</span> into an HTML bit before it.
 		// The dialog then displays the next item, and appends a clone of the HTML before it.
 		if(problemDiv.find('span.includer').text() == 'includenext'){
