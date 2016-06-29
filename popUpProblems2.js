@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 		state = video.data('video-player-state');	// Sometimes this fails and that's ok.
 
-		if (state.videoPlayer.isCued()){
+		if (typeof state.videoPlayer.player.getPlayerState() !== 'undefined'){
 			console.log('video data loaded');
 			clearInterval(waitForVid);
 			var pause = setTimeout(function(){
@@ -68,7 +68,7 @@ $(document).ready(function(){
 				mainLoop();
 			}, 0);
 		}
-	}, 100);
+	}, 200);
 	
 	// Checks local storage and gets data from the video.
 	function setUpData(){
