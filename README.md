@@ -1,6 +1,10 @@
 Embedded Video Problems for edX
 ====================
 
+**Warning:** This code has been folded into and superceded by [HX-JS](https://github.com/Colin-Fredericks/hx-js), which is a much better source for your video-meddling needs. You should go there instead.
+
+-----
+
 Do you, brave course designer, want to have questions appear during your video? This script does it. The problem pops up, the video pauses, the student answers or skips the question, and the video keeps playing.
 
 If you're an edX student, this script isn't useful for you. It's something that course designers use, not something that students can use.
