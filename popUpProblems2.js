@@ -65,17 +65,21 @@ $(document).ready(function() {
 
   // Check to see whether the video is ready before continuing.
   var waitForVid = setInterval(function() {
-    state = video.data('video-player-state'); // Sometimes this fails and that's ok.
+    try {
+      state = video.data('video-player-state'); // Sometimes this fails and that's ok.
 
-    if (typeof state.videoPlayer.player.getPlayerState() !== 'undefined') {
-      console.log('video data loaded');
-      clearInterval(waitForVid);
-      var pause = setTimeout(function() {
-        console.log('done waiting');
-        setUpData();
-        setUpControls();
-        mainLoop();
-      }, 0);
+      if (typeof state.videoPlayer.player.getPlayerState() !== 'undefined') {
+        console.log('video data loaded');
+        clearInterval(waitForVid);
+        var pause = setTimeout(function() {
+          console.log('done waiting');
+          setUpData();
+          setUpControls();
+          mainLoop();
+        }, 0);
+      }
+    } catch (err) {
+      console.log('Waiting for video to load');
     }
   }, 200);
 
