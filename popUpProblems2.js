@@ -23,28 +23,17 @@ $(document).ready(function() {
   // Sort the popUpProblemTimer by time.
   popUpProblemTimer.sort(timeCompare); // Uses a custom function to sort by time.
 
-  // Sets default options if any of them have not been included.
-  if (typeof window.HXpopUpOptions === 'undefined') {
-    var HXpopUpOptions = {};
-  }
-  if (typeof window.HXpopUpOptions.width === 'undefined') {
-    window.HXpopUpOptions.width = 800;
-  }
-  if (typeof window.HXpopUpOptions.effect === 'undefined') {
-    window.HXpopUpOptions.effect = 'fade';
-  }
-  if (typeof window.HXpopUpOptions.effectlength === 'undefined') {
-    window.HXpopUpOptions.effectlength = 200;
-  }
-  if (typeof window.HXpopUpOptions.myPosition === 'undefined') {
-    window.HXpopUpOptions.myPosition = 'center';
-  }
-  if (typeof window.HXpopUpOptions.atPosition === 'undefined') {
-    window.HXpopUpOptions.atPosition = 'center';
-  }
-  if (typeof window.HXpopUpOptions.ofTarget === 'undefined') {
-    window.HXpopUpOptions.ofTarget = window;
-  }
+  // Pop-up settings may be defined in HXpopUpOptions.
+  // Use settings from there, or set defaults.
+  const popSettings = window.HXpopUpOptions;
+  const {
+    popWidth = 800,
+    popEffect = 'fade',
+    popEffectLength = 200,
+    popMyPosition = 'center',
+    popAtPosition = 'center',
+    popOfTarget = window
+  } = popSettings;
 
   // Log play/pause events from the player.
   // Also set the play/pause external control properly.
@@ -298,15 +287,15 @@ $(document).ready(function() {
       modal: true,
       dialogClass: 'no-close',
       resizable: true,
-      width: HXpopUpOptions.width,
+      width: popWidth,
       show: {
-        effect: HXpopUpOptions.effect,
-        duration: HXpopUpOptions.effectlength
+        effect: popEffect,
+        duration: popEffectLength
       },
       position: {
-        my: HXpopUpOptions.myPosition,
-        at: HXpopUpOptions.atPosition,
-        of: HXpopUpOptions.ofTarget
+        my: popMyPosition,
+        at: popAtPosition,
+        of: popOfTarget
       },
       buttons: {
         Skip: function() {
